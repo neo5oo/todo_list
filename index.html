@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Danil Malkov">
+  <meta name="description" content="ToDo List">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Todo List</title>
+</head>
+
+<body class="page">
+  <header class="header page__container">
+    <h1 class="header__title">Todo List</h1>
+  </header>
+
+  <main>
+
+    <section class="todo page__container">
+      <form class="todo__form" novalidate>
+        <label class="todo__field">
+          <input type="text" class="todo__input" name="title" placeholder="Текст задачи" minlength="4" maxlength="50"></input>
+          <span class="todo__input-error"></span>
+        </label>
+        <button type="submit" class="button button_type_add" aria-label="Добавить"></button>
+      </form>
+
+      <ul class="notes">
+
+      <div class= "overlay"></div>
+      </ul>
+
+    </section>
+
+  </main>
+
+  <footer class="footer page__container">
+    <p class="footer__author">&copy; 2023 by neo</p>
+  </footer>
+
+  <template class="note-template">
+    <li class="note">
+      <h2 class="note__title"></h2>
+      <div class="note__container">
+        <button type="button" class="button button_type_edit" aria-label="Редактировать"></button>
+        <button type="button" class="button button_type_duplicate" aria-label="Дублировать"></button>
+        <button type="button" class="button button_type_remove" aria-label="Удалить"></button>
+      </div>
+    </li>
+  </template>
+</body>
+</html>
