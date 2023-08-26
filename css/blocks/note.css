@@ -1,0 +1,53 @@
+@keyframes appear{
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+  
+.note {
+    animation: appear .5s ease-in-out;
+    animation-fill-mode: both;
+    display: flex;
+    border: 1px solid #808080;
+    border-radius: 7px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 35px;
+    box-sizing: border-box;
+    width: 100%;
+}
+  
+.note__container {
+    min-width: 69px;
+    display: flex;
+    justify-content: space-between;
+}
+  
+.note__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.22;
+    color: #fff;
+    margin: 0 10px 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 75%;
+}
+  
+@media screen and (max-width: 786px) {
+    .note__title {
+      font-size: 18px;
+      line-height: 1.24;
+    }
+}
+  
+@media screen and (max-width: 620px) {
+    .note__title {
+      font-size: 16px;
+      line-height: 1.24;
+    }
+}

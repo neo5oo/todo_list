@@ -1,0 +1,15 @@
+.notes {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    row-gap: 20px;
+    grid-template-columns: 100%;
+    list-style: none;
+    justify-content: center;
+    position: relative;
+}
+  
+.overlay__active {
+    display: flex;
+}
+  

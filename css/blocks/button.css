@@ -1,0 +1,42 @@
+.button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    transition: All .5s ease-in-out;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+    background-size: contain;
+    cursor: pointer;
+}
+  
+.button:hover {
+    opacity: 0.6;
+}
+
+.button_type_add {
+    background-image: url('../../../images/add.svg');
+}
+ 
+.button_type_duplicate {
+    background-image: url('../../../images/duplicate.svg');
+}
+  
+.button_type_edit {
+    background-image: url('../../../images/edit.svg');
+}
+  
+.button_type_remove {
+    background-image: url('../../../images/remove.svg');
+}
+  
+.button__inactive {
+    opacity: 0.3;
+  }
+  
+.button__inactive:hover {
+    opacity: 0.3;
+}
+  
