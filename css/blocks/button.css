@@ -21,11 +21,11 @@
 }
  
 .button_type_done {
-    background-image: url('/img/duplicate.svg');
+    background-image: url('/img/done.svg');
 }
   
 .button_type_delete {
-    background-image: url('/img/remove.svg');
+    background-image: url('/img/delete.svg');
 }
   
 .button__inactive {

@@ -19,6 +19,10 @@
     box-sizing: border-box;
     width: 100%;
 }
+
+.task__done {
+  order: 1;
+}
   
 .task__container {
     min-width: 69px;
@@ -50,4 +54,9 @@
       font-size: 16px;
       line-height: 1.24;
     }
+}
+
+.task__title--done {
+  text-decoration: line-through;
+  color: #CDCDCD;
 }
