@@ -20,11 +20,11 @@
     background-image: url('/img/add.svg');
 }
  
-.button_type_filled {
+.button_type_done {
     background-image: url('/img/duplicate.svg');
 }
   
-.button_type_remove {
+.button_type_delete {
     background-image: url('/img/remove.svg');
 }
   
