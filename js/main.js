@@ -16,5 +16,8 @@ form.addEventListener('submit', function(event) {
   </li>`
 
   tasksList.insertAdjacentHTML('beforeend', taskHTML);
+
+  taskInput.value = ''
+  taskInput.focus()
 })
 
