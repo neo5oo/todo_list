@@ -33,13 +33,19 @@
     outline: none;
     border: none;
     border-bottom: 1px solid #fff;
-    color: #000;
+    color: #fff;
     font-family: inherit;
     line-height: 1.15;
     font-size: 16px;
     width: 100%;
     padding: 0;
 }
+
+.todo__input::placeholder {
+    color: #fff;
+}
+    
+
   
 .todo__input_type_error {
     border-bottom: 1px solid rgb(168, 8, 8);

@@ -17,19 +17,15 @@
 }
 
 .button_type_add {
-    background-image: url('../../../images/add.svg');
+    background-image: url('/img/add.svg');
 }
  
-.button_type_duplicate {
-    background-image: url('../../../images/duplicate.svg');
-}
-  
-.button_type_edit {
-    background-image: url('../../../images/edit.svg');
+.button_type_filled {
+    background-image: url('/img/duplicate.svg');
 }
   
 .button_type_remove {
-    background-image: url('../../../images/remove.svg');
+    background-image: url('/img/remove.svg');
 }
   
 .button__inactive {
@@ -40,3 +36,15 @@
     opacity: 0.3;
 }
   
+.button_active {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 20px;
+}
+
+.btn {
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+}

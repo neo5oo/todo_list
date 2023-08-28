@@ -7,7 +7,7 @@
     }
 }
   
-.note {
+.task {
     animation: appear .5s ease-in-out;
     animation-fill-mode: both;
     display: flex;
@@ -20,13 +20,13 @@
     width: 100%;
 }
   
-.note__container {
+.task__container {
     min-width: 69px;
     display: flex;
     justify-content: space-between;
 }
   
-.note__title {
+.task__title {
     font-size: 24px;
     font-weight: 700;
     line-height: 1.22;
@@ -39,14 +39,14 @@
 }
   
 @media screen and (max-width: 786px) {
-    .note__title {
+    .task__title {
       font-size: 18px;
       line-height: 1.24;
     }
 }
   
 @media screen and (max-width: 620px) {
-    .note__title {
+    .task__title {
       font-size: 16px;
       line-height: 1.24;
     }

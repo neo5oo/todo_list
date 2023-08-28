@@ -25,7 +25,14 @@
         <button type="submit" class="button button_type_add" aria-label="Добавить"></button>
       </form>
 
-      <ul class="notes">
+      <div class="button_active">
+        <button type="submit" class="btn button_active__btn-even" aria-label="Четная задача">Четные задачи</button>
+        <button type="submit" class="btn button_active__btn-odd" aria-label="Нечетная задача">Нечетные задачи</button>
+        <button type="submit" class="btn button_active__btn-first" aria-label="Первая задача">Первая задача</button>
+        <button type="submit" class="btn button_active__btn-last" aria-label="Последняя задача">Последняя задача</button>
+      </div>
+
+      <ul class="tasks">
 
       <div class= "overlay"></div>
       </ul>
@@ -38,12 +45,11 @@
     <p class="footer__author">&copy; 2023 by neo</p>
   </footer>
 
-  <template class="note-template">
-    <li class="note">
-      <h2 class="note__title"></h2>
-      <div class="note__container">
-        <button type="button" class="button button_type_edit" aria-label="Редактировать"></button>
-        <button type="button" class="button button_type_duplicate" aria-label="Дублировать"></button>
+  <template class="task-template">
+    <li class="task">
+      <h2 class="task__title"></h2>
+      <div class="task__container">
+        <button type="button" class="button button_type_filled" aria-label="Отметить выполненной"></button>
         <button type="button" class="button button_type_remove" aria-label="Удалить"></button>
       </div>
     </li>
