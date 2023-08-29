@@ -1,11 +1,20 @@
 const form = document.querySelector('.todo__form');
 const taskInput = document.querySelector('.todo__input');
 const tasksList = document.querySelector('.tasks');
-const task = document.querySelector('.task');
+const btnEven = document.querySelector('.button_active__btn-even');
+const btnOdd = document.querySelector('.button_active__btn-odd');
+const btnFirst = document.querySelector('.button_active__btn-first');
+const btnLast = document.querySelector('.button_active__btn-last');
+
+let tasks = [];
 
 form.addEventListener('submit', addTask)
 tasksList.addEventListener('click', deleteTask)
 tasksList.addEventListener('click', doneTask)
+btnEven.addEventListener('click', showEvenTasks)
+btnOdd.addEventListener('click', showOddTasks)
+btnFirst.addEventListener('click', showFirstTask)
+btnLast.addEventListener('click', showLastTask)
 
 /**
  * Добавление задачи
@@ -16,8 +25,18 @@ function addTask(event) {
 
     const taskText = taskInput.value
 
-    const taskHTML = `<li class="task">
-    <span class="task__title">${taskText}</span>
+    const newTask = {
+        id: Date.now(),
+        text: taskText,
+        done: false,
+    };
+
+    tasks.push(newTask)
+
+    const cssClass = newTask.done ? "task__title task__title--done" : "task__title";
+
+    const taskHTML = `<li id="${newTask.id}" class="task">
+    <span class="${cssClass}">${newTask.text}</span>
     <div class="task__container">
       <button type="button" class="button button_type_done" data-action="done" aria-label="Отметить выполненной"></button>
       <button type="button" class="button button_type_delete" data-action="delete" aria-label="Удалить"></button>
@@ -54,3 +73,34 @@ function doneTask(event) {
     }
 }
 
+function showEvenTasks() {
+    const task = document.getElementsByTagName('li');
+    
+    for (let i = 0; i < task.length; i++) {
+        if (i % 2 !== 0) {
+            task[i].classList.toggle('task__active')
+        }
+    }
+}
+
+function showOddTasks() {
+    const task = document.getElementsByTagName('li');
+    
+    for (let i = 0; i < task.length; i++) {
+        if (i % 2 === 0) {
+            task[i].classList.toggle('task__active')
+        }
+    }
+}
+
+function showFirstTask() {
+    const task = document.getElementsByTagName('li');
+
+    task[0].classList.toggle('task__active')
+}
+
+function showLastTask() {
+    const task = document.getElementsByTagName('li');
+
+    task[task.length-1].classList.toggle('task__active')
+}
