@@ -54,10 +54,20 @@ function addTask(event) {
  * @param {event} event 
  */
 function deleteTask(event) {
-    if (event.target.dataset.action === 'delete') {
-        const parentNode = event.target.closest('li');
-        parentNode.remove()
-    }
+    if (event.target.dataset.action !== 'delete') return;
+
+    const parentNode = event.target.closest('li');
+
+    const id = Number(parentNode.id);
+    const index = tasks.findIndex(function(task) {
+        if (task.id === id) {
+            return true
+        }
+    })
+
+    console.log(index);
+
+    parentNode.remove()
 }
 
 /**
