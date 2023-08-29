@@ -97,7 +97,7 @@ function doneTask(event) {
 
 function showEvenTasks() {
     const task = document.getElementsByTagName('li');
-    
+
     for (let i = 0; i < task.length; i++) {
         if (i % 2 !== 0) {
             task[i].classList.toggle('task__active')
@@ -118,13 +118,13 @@ function showOddTasks() {
 function showFirstTask() {
     const task = document.getElementsByTagName('li');
 
-    task[0].classList.toggle('task__active')
+    task[0].remove();
 }
 
 function showLastTask() {
     const task = document.getElementsByTagName('li');
 
-    task[task.length-1].classList.toggle('task__active')
+    task[task.length-1].remove();
 }
 
 function saveToLocalStorage() {
