@@ -21,8 +21,8 @@ tasksList.addEventListener('click', deleteTask)
 tasksList.addEventListener('click', doneTask)
 btnEven.addEventListener('click', showEvenTasks)
 btnOdd.addEventListener('click', showOddTasks)
-btnFirst.addEventListener('click', showFirstTask)
-btnLast.addEventListener('click', showLastTask)
+btnFirst.addEventListener('click', delFirstTask)
+btnLast.addEventListener('click', delLastTask)
 
 /**
  * Добавление задачи
@@ -115,13 +115,13 @@ function showOddTasks() {
     }
 }
 
-function showFirstTask() {
+function delFirstTask() {
     const task = document.getElementsByTagName('li');
 
     task[0].remove();
 }
 
-function showLastTask() {
+function delLastTask() {
     const task = document.getElementsByTagName('li');
 
     task[task.length-1].remove();
